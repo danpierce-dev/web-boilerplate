@@ -1,0 +1,45 @@
+
+img, picture {
+    display: block; // removes additional whitespace
+    max-width: 100%; 
+}
+
+
+.banner-image {
+    height: 350px;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+
+embed, iframe, object { max-width: 100%; }
+
+/*
+  - iframe-wrapper
+    - iframe-container
+      - <iframe>
+*/
+.iframe-wrapper {
+    @include breakpoint-m {
+        margin: 0 auto;
+        width: 80%;  
+    }
+    @include breakpoint-l { width: 70%; }
+    @include breakpoint-xl { width: 60%; }   
+}
+.iframe-container {
+    padding-top: 25px;
+    height: 0;
+    margin: 0 auto;
+    padding-bottom: 56.25%; // 16:9 aspect ratio
+    position: relative;
+    iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+

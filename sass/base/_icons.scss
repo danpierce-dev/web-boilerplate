@@ -1,0 +1,16 @@
+
+.icon {
+    height: 20px;
+    fill: $primary;
+    transition: all $base-speed;
+    vertical-align: middle;
+    width: 20px;
+    
+    @include breakpoint-s {
+        height: 25px;
+        width: 25px;
+    }
+    
+}
+
+

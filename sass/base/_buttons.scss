@@ -1,0 +1,52 @@
+
+.button, button {
+    background: $primary;
+    border: 0;
+    border-radius: $rounded;
+    box-sizing: border-box; 
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font: {
+        family: $base-font-family;
+        size: 1.4rem;
+        weight: $base-font-weight;
+    }
+    letter-spacing: .2px;
+    padding: $small $medium;
+    text-align: center;   
+    text-decoration: none;
+    transition: all ease-in-out $base-speed;
+
+    &:visited { color: #fff; }
+    &:active, &:hover {
+        background: $link--dark;
+        color: #fff;
+        outline: 0;
+    }
+    &:active { transform: translateY(1px); }
+
+    .icon { margin-bottom: 0; }
+}
+
+@include breakpoint-s {
+    .button.primary { font-size: 1.8rem; }
+}
+
+.button.secondary {
+    background: $grey--med;
+    color: $grey--dark;
+
+    &:active, &:hover {
+        background: $grey--dark;
+        color: #fff;
+    }
+}
+
+
+.button-centered {
+    display: flex;
+    justify-content: center;
+}
+
+

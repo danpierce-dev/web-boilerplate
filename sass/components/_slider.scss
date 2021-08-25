@@ -1,0 +1,140 @@
+
+.slider-container {
+    position: relative;
+    margin: $large auto;    
+    max-width: 900px; // max width can be set to the slide image width in order to constrain arrow positioning
+}
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    &:focus { outline: none; }
+}
+
+.slick-list .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    @extend .clearfix;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.slick-loading .slick-track { visibility: hidden; }
+
+.slick-slide {
+    display: none;
+    float: left;
+    min-height: 1px;
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &.slick-loading img { display: none; }
+
+    &.dragging img { pointer-events: none; }
+}
+
+[dir='rtl'] .slick-slide { float: right; }
+
+.slick-initialized .slick-slide { display: block; }
+
+.slick-loading .slick-slide { visibility: hidden; }
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden { display: none; }
+
+.slick-list .card {
+    margin: 0 20px 20px 0;
+    
+    @media screen and (max-width: 600px) { margin: 0 0 30px; }
+}
+
+// arrows
+.slider-arrows {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: absolute;
+    top: calc(50% - 30px); // subtract arrow height
+    transform: translateY(-50%);
+    vertical-align: middle;
+    width: 100%;
+}
+
+.slider-arrows__prev, .slider-arrows__next {
+    background: transparent;
+    content: url(../images/icons/icon-arrow.svg);
+    cursor: pointer;
+    height: 30px;
+    margin: 0 10px;
+    width: 30px;
+}
+.slider-arrows__prev { transform: rotate(180deg); }
+
+// hide buttons when there's no slide to navigate to
+.slick-disabled { display: none!important; }
+
+.slick-dots {
+    margin: $medium auto;
+    padding: 0;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        list-style: none;
+    }
+
+    button {
+        background: $grey--med;
+        border-radius: 50%;
+        font-size: 0;
+        height: 15px;
+        margin: 4px 8px;
+        padding: 0;
+        width: 15px;
+
+        &:active, &:focus { outline: 0; }
+    }
+}
+.slick-active button { background: $primary; }
+ 
+

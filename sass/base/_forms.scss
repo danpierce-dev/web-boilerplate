@@ -1,0 +1,129 @@
+
+form {
+    background: $grey;
+    border-radius: $rounded;
+    margin: $medium 0;
+    max-width: 500px;
+    padding: $medium;
+    width: 100%;
+
+    @include breakpoint-s { margin: $large 0; }
+}
+
+input, textarea, select, fieldset { margin-bottom: $medium; }
+
+input, textarea {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid $grey--med;
+    border-radius: $rounded;
+    box-shadow: none;
+    box-sizing: border-box; 
+    display: block;
+    font-size: 1.6rem;
+    height: 40px;
+    padding: 5px $small;
+    width: 100%;
+
+    &:focus {
+        border: 1px solid $primary;
+        outline: 0; 
+    }
+}
+
+select {
+    @extend input;
+    appearance: normal;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+label, legend {
+    color: $grey--dark;
+    display: block;
+    font-weight: $base-font-weight; 
+    margin-bottom: 0;
+    position: relative;
+}
+
+fieldset {
+    border-width: 0; 
+    padding: 0;
+}
+
+
+.radio-container, .checkbox-container { margin-bottom: 15px; }
+
+.radio-container label, .checkbox-container label {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.6rem;
+}
+
+.radio-list, .checkbox-list {
+    padding-left: 0;
+    margin: $large 0;
+
+    li { list-style: none; }
+}
+
+input[type="radio"], input[type="checkbox"] {
+    cursor: pointer;
+    display: inline-block;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+}
+
+.custom-radio, .custom-checkbox {
+    background: white;
+    border-radius: $rounded;
+    box-shadow: 0 0 0 1px $grey--med;
+    content: "";
+    cursor: pointer;
+    display: inline-block;
+    height: 32px;
+    margin: 0 8px 0 0;
+    padding: 0;
+    vertical-align: middle;
+    width: 32px;
+    -webkit-backface-visibility: hidden;
+}
+.custom-radio { border-radius: 18px; }
+
+input:active + .custom-radio, input:active + .custom-checkbox { box-shadow: 0 0 0 1px $primary; }
+input:focus + .custom-radio, input:focus + .custom-checkbox { box-shadow: 0 0 0 1px $primary; }
+
+input[type="radio"]:checked + .custom-radio::after, input[type="checkbox"]:checked + .custom-checkbox::after {
+    background: $primary url(../images/icons/icon-tick.svg) center / 20px no-repeat;
+    border-radius: $rounded;
+    content: '';
+    display: inline-block;
+    height: 32px;
+    padding: 6px;
+    width: 32px;
+}
+input[type="radio"]:checked + .custom-radio::after {
+    background-size: 18px;
+    border-radius: 16px;
+}
+
+
+input[type="submit"], input[type="button"] {
+    @extend .button;
+    height: auto;
+    margin-bottom: 0;
+    width: 100%;
+
+    @include breakpoint-s { max-width: 180px; }
+}
+
+
+::-webkit-input-placeholder { color: #7c7b7b; }
+::-moz-placeholder { color: #7c7b7b; }
+
+

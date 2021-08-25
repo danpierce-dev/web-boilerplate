@@ -1,0 +1,22 @@
+
+main, .content-heading, .content-main { position: relative; }
+
+main { margin: $large 0; }
+
+
+section {
+	margin: $medium auto;
+	@include breakpoint-m { margin: $large auto; }
+	@include breakpoint-xl { margin: $xlarge auto; }
+}
+
+
+aside {
+    background: #fff;
+    height: 100vh;
+    margin: 0!important;
+    max-width: 600px!important;
+    padding: 40px;
+}
+
+

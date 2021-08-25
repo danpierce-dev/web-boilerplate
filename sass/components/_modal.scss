@@ -1,0 +1,47 @@
+
+.modal {
+    background: rgba(95,95,95,0.9);
+    display: none;
+    height: 100%;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9998;
+}
+.modal--open { display: block; }
+
+.container--modal {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+// actual modal area
+.modal-content {
+    background: #fff;
+    border-radius: $rounded;
+    max-height: 90vh;
+    overflow-y: scroll;
+    padding: $large $medium $medium;
+    position: relative;
+    width: 100%;
+    z-index: 9999;
+
+    *:last-child { margin-bottom: 0;}
+
+    @include breakpoint-l { padding: $large; }
+}
+
+.close-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+

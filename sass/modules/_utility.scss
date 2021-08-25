@@ -1,0 +1,56 @@
+
+.clearfix {
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+    &:after { clear: both; }
+}
+
+
+@include breakpoint-s {
+    .right-align {
+        margin-left: auto;
+        text-align: right;
+    }
+}
+
+
+.elements-stacked {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & > * {
+        margin: $small 0;
+        &:last-child { margin-bottom: 0; }
+
+        @include breakpoint-m { margin: $medium 0; }
+    }
+}
+.elements-inline {
+    @extend .elements-stacked;
+
+    @include breakpoint-l {
+        flex-direction: row;
+
+        & > * { margin: 0 $small; }
+        .icon { margin: 0 $small; } // overrides icon margins
+    }
+}
+
+
+.visually-hidden {
+    max-height: 0;
+    overflow: hidden;
+}
+.show {
+    max-height: none;
+    overflow: initial;
+}
+
+
+.debug { border: solid 1px red; }
+
+

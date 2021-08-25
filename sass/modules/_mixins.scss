@@ -1,0 +1,24 @@
+
+// media queries    
+@mixin breakpoint-s {
+    @media (min-width: #{$phone-width}) {
+        @content;
+    }
+}
+@mixin breakpoint-m {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}  
+@mixin breakpoint-l {
+    @media (min-width: #{$laptop-width}) {
+        @content;
+    }
+}  
+@mixin breakpoint-xl {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+
