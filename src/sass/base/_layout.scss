@@ -1,48 +1,63 @@
-
 .container {
-    margin: $medium auto;
-    position: relative;
-    width: 90%;
+  margin: $medium auto;
+  position: relative;
+  width: 90%;
 }
 .container--narrow {
-    margin: 0 auto;
-    max-width: 1200px;
-    width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
 }
 
 .flex-container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 
-    @include breakpoint-s {
-        align-items: flex-start; // prevents vertical stretching
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+  @include breakpoint-s {
+    align-items: flex-start; // prevents vertical stretching
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
+// fix for slider within CSS grid, which by default uses 'min-width: auto'
+.grid-item {
+  min-width: 0;
+}
 
 @include breakpoint-s {
-    .grid {
-        display: grid;
-        grid-gap: 20px;
-    }
+  .grid {
+    display: grid;
+    grid-gap: 20px;
+  }
 
-    .col-2, .col-3, .col-4, .col-5 { grid-template-columns: repeat(2, 1fr); }
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @include breakpoint-m {
-    .col-3, .col-4, .col-5 { grid-template-columns: repeat(3, 1fr); }   
+  .col-3,
+  .col-4,
+  .col-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @include breakpoint-l {
-    .col-4, .col-5 { grid-template-columns: repeat(4, 1fr); }
+  .col-4,
+  .col-5 {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @include breakpoint-xl {
-    .col-5 { grid-template-columns: repeat(5, 1fr); }
+  .col-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
-
-

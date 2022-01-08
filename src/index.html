@@ -1,344 +1,480 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="format-detection" content="telephone=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
 
     <title>Boilerplate</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
 
-    <meta name="description" content="">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="https://via.placeholder.com/400x300">
-    <meta property="og:image:alt" content="">
-    <meta property="og:locale" content="en_GB">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:url" content="">
-    <meta name="twitter:dnt" content="on">
-    
-    <link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
-    <link rel="manifest" href="/site.webmanifest"> 
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://via.placeholder.com/400x300" />
+    <meta property="og:image:alt" content="" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:dnt" content="on" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <!-- 32×32 -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- 180×180 -->
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Google Analytics: change UA-XXXXX-X to site's ID. -->
     <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='https://www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+      (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] ||
+          (b[l] = function () {
+            (b[l].q = b[l].q || []).push(arguments);
+          });
+        b[l].l = +new Date();
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = "https://www.google-analytics.com/analytics.js";
+        r.parentNode.insertBefore(e, r);
+      })(window, document, "script", "ga");
+      ga("create", "UA-XXXXX-X", "auto");
+      ga("send", "pageview");
     </script>
+  </head>
 
-</head>
-
-
-<body>
-
+  <body>
     <header class="header">
-        <div class="container container--header flex-container">
-            <a href="index.html" class="header__logo">Boilerplate</a>
+      <div class="container container--header flex-container">
+        <a href="index.html" class="header__logo">Boilerplate</a>
 
-            <div class="flex-container header__header-links">
-                <a href="#" id="js-open-nav" class="header-links__link open-nav">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon"><path d="M492 236H20c-11 0-20 9-20 20 0 11 9 20 20 20h472c11 0 20-9 20-20S503 236 492 236z"/><path d="M492 76H20C9 76 0 85 0 96s9 20 20 20h472c11 0 20-9 20-20S503 76 492 76z"/><path d="M492 396H20c-11 0-20 9-20 20s9 20 20 20h472c11 0 20-9 20-20S503 396 492 396z"/></svg>
-                </a>
-            </div>
+        <div class="flex-container header__header-links">
+          <a
+            href="index.html"
+            class="js-open-main-nav header-links__link open-nav"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="icon"
+            >
+              <path
+                d="M492 236H20c-11 0-20 9-20 20 0 11 9 20 20 20h472c11 0 20-9 20-20S503 236 492 236z"
+              />
+              <path
+                d="M492 76H20C9 76 0 85 0 96s9 20 20 20h472c11 0 20-9 20-20S503 76 492 76z"
+              />
+              <path
+                d="M492 396H20c-11 0-20 9-20 20s9 20 20 20h472c11 0 20-9 20-20S503 396 492 396z"
+              />
+            </svg>
+          </a>
         </div>
+      </div>
 
-        <nav class="main-nav">
-            <div class="container container--nav flex-container">
-                <a href="#" id="js-close-nav" class="header-links__link close-nav">
-                    <img src="images/icons/icon-close.svg" alt="" class="icon">
-                </a>
+      <nav class="main-nav">
+        <div class="container container--nav flex-container">
+          <a href="#" class="js-close-main-nav header-links__link close-nav">
+            <img src="images/icons/icon-close.svg" alt="" class="icon" />
+          </a>
 
-                <ul class="main-nav__list">
-                    <li class="main-nav__link"><a href="#typography">Typography</a></li>
-                    <li class="main-nav__link"><a href="#grid">Grid</a></li>
-                    <li class="main-nav__link"><a href="#table">Table</a></li>
-                    <li class="main-nav__link"><a href="#form">Form</a></li>
-                    <li class="main-nav__link"><a href="#accordion">Accordion</a></li>
-                    <li class="main-nav__link"><a href="#slider">Slider</a></li>
-                    <li class="main-nav__link"><a href="#modal">Modal</a></li>
-                </ul>
-            </div>
-        </nav>
+          <ul class="main-nav__list">
+            <li class="main-nav-list__item">
+              <a href="#typography">Typography</a>
+            </li>
+            <li class="main-nav-list__item">
+              <a href="#grid">Grid</a>
+            </li>
+            <li class="main-nav-list__item">
+              <a href="#table">Table</a>
+            </li>
+            <li class="main-nav-list__item">
+              <a href="#form">Form </a>
+            </li>
+            <li class="main-nav-list__item">
+              <a href="#accordion">Accordion</a>
+            </li>
+            <li class="main-nav-list__item">
+              <a href="#slider">Slider</a>
+            </li>
+            <li class="main-nav-list__item">
+              <a href="#modal">Modal</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-
     <main>
-        <div class="container">
+      <div class="container">
+        <section id="typography">
+          <h1>Typography</h1>
+          <hr />
 
-            <section id="typography">
-                <h1>Typography</h1>
-                <hr>
+          <div class="container--narrow">
+            <h2>Header 2</h2>
+            <h3>Header 3</h3>
+            <h4>Header 4</h4>
 
-                <div class="container--narrow">    
-                    <h2>Header 2</h2>
-                    <h3>Header 3</h3>
-                    <h4>Header 4</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              fringilla neque diam, eget dictum tortor suscipit molestie. Cras
+              id suscipit risus, nec placerat odio. Ut sed tristique nisl. Nulla
+              ornare ligula at orci tempus, id volutpat mi ultricies. In congue
+              lectus a ipsum tempus, vitae tristique lectus ullamcorper.
+            </p>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla neque diam, eget dictum tortor suscipit molestie. Cras id suscipit risus, nec placerat odio. Ut sed tristique nisl. Nulla ornare ligula at orci tempus, id volutpat mi ultricies. In congue lectus a ipsum tempus, vitae tristique lectus ullamcorper.</p>
-    
-                    <blockquote>&quot;Aliquam pulvinar faucibus ultricies. In lobortis tristique ex id aliquet.&quot;</blockquote>
-    
-                    <p>Maecenas nec accumsan diam, in posuere enim. In laoreet porttitor neque nec tristique. Donec imperdiet dui velit, non dictum ex gravida quis. Duis consequat neque in velit viverra consequat. Etiam nec massa ante.</p>
-    
-                    <ul>
-                        <li>List item</li>
-                        <li>List item</li>
-                        <li>List item</li>
-                    </ul>
+            <blockquote>
+              &quot;Aliquam pulvinar faucibus ultricies. In lobortis tristique
+              ex id aliquet.&quot;
+            </blockquote>
+
+            <p>
+              Maecenas nec accumsan diam, in posuere enim. In laoreet porttitor
+              neque nec tristique. Donec imperdiet dui velit, non dictum ex
+              gravida quis. Duis consequat neque in velit viverra consequat.
+              Etiam nec massa ante.
+            </p>
+
+            <ul>
+              <li>List item</li>
+              <li>List item</li>
+              <li>List item</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="grid">
+          <h1>Grid</h1>
+
+          <div class="grid col-4">
+            <div class="grid-item card">
+              <div class="card__card-media">
+                <a href=""
+                  ><img
+                    src="https://via.placeholder.com/400x300"
+                    alt=""
+                    class="card-media__image"
+                /></a>
+              </div>
+
+              <div class="card__card-info">
+                <a href="" class="card-info__title">Grid item</a>
+              </div>
+            </div>
+
+            <div class="grid-item card">
+              <div class="card__card-media">
+                <a href=""
+                  ><img
+                    src="https://via.placeholder.com/400x300"
+                    alt=""
+                    class="card-media__image"
+                /></a>
+              </div>
+
+              <div class="card__card-info">
+                <a href="" class="card-info__title">Grid item</a>
+              </div>
+            </div>
+
+            <div class="grid-item card">
+              <div class="card__card-media">
+                <a href=""
+                  ><img
+                    src="https://via.placeholder.com/400x300"
+                    alt=""
+                    class="card-media__image"
+                /></a>
+              </div>
+
+              <div class="card__card-info">
+                <a href="" class="card-info__title">Grid item</a>
+              </div>
+            </div>
+
+            <div class="grid-item card">
+              <div class="card__card-media">
+                <a href=""
+                  ><img
+                    src="https://via.placeholder.com/400x300"
+                    alt=""
+                    class="card-media__image"
+                /></a>
+              </div>
+
+              <div class="card__card-info">
+                <a href="" class="card-info__title">Grid item</a>
+              </div>
+            </div>
+
+            <div class="grid-item card">
+              <div class="card__card-media">
+                <a href=""
+                  ><img
+                    src="https://via.placeholder.com/400x300"
+                    alt=""
+                    class="card-media__image"
+                /></a>
+              </div>
+
+              <div class="card__card-info">
+                <a href="" class="card-info__title">Grid item</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="table">
+          <h1>Table</h1>
+          <hr />
+
+          <table>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+            </tr>
+
+            <tr>
+              <td data-label="First Name">Joe</td>
+              <td data-label="Last Name">Bloggs</td>
+            </tr>
+          </table>
+        </section>
+
+        <section id="form">
+          <h1>Form</h1>
+          <hr />
+
+          <form method="post">
+            <label for="inputText">Text field</label>
+            <input type="text" id="inputText" name="inputText" />
+
+            <label for="selectList">Make a selection</label>
+            <select id="selectList" name="selectList">
+              <option value="Option A">Option A</option>
+              <option value="Option B">Option B</option>
+              <option value="Option C">Option C</option>
+            </select>
+
+            <ul class="checkbox-list">
+              <h4>Make a selection</h4>
+
+              <li>
+                <div class="checkbox-container">
+                  <label for="checkboxList">
+                    <input
+                      type="checkbox"
+                      checked="checked"
+                      name="checkboxList"
+                      value="Option A"
+                    />
+                    <span class="custom-checkbox"></span>
+                    Option A
+                  </label>
                 </div>
-            </section>
+                <div class="checkbox-container">
+                  <label for="checkboxList">
+                    <input
+                      type="checkbox"
+                      name="checkboxList"
+                      value="Option B"
+                    />
+                    <span class="custom-checkbox"></span>
+                    Option B
+                  </label>
+                </div>
+                <div class="checkbox-container">
+                  <label for="checkboxList">
+                    <input
+                      type="checkbox"
+                      name="checkboxList"
+                      value="Option C"
+                    />
+                    <span class="custom-checkbox"></span>
+                    Option C
+                  </label>
+                </div>
+              </li>
+            </ul>
 
+            <ul class="radio-list">
+              <h4>Make a selection</h4>
 
-            <section id="grid">
-                <h1>Grid</h1>
+              <li>
+                <div class="radio-container">
+                  <label for="radioList">
+                    <input
+                      type="radio"
+                      checked="checked"
+                      id="radioList"
+                      name="radioList"
+                      value="Option A"
+                    />
+                    <span class="custom-radio"></span>
+                    Option A
+                  </label>
+                </div>
+                <div class="radio-container">
+                  <label for="radioList">
+                    <input
+                      type="radio"
+                      id="radioList"
+                      name="radioList"
+                      value="Option B"
+                    />
+                    <span class="custom-radio"></span>
+                    Option B
+                  </label>
+                </div>
+                <div class="radio-container">
+                  <label for="radioList">
+                    <input
+                      type="radio"
+                      id="radioList"
+                      name="radioList"
+                      value="Option C"
+                    />
+                    <span class="custom-radio"></span>
+                    Option C
+                  </label>
+                </div>
+              </li>
+            </ul>
 
-                <div class="grid col-4">
-                    <div class="grid-item card">
-                        <div class="card__card-media">
-                            <a href=""><img src="https://via.placeholder.com/400x300" alt="" class="card-media__image"></a>
-                        </div>
+            <div class="button-centered">
+              <input type="submit" value="Submit" class="button primary" />
+            </div>
+          </form>
+        </section>
 
-                        <div class="card__card-info">
-                            <a href="" class="card-info__title">Grid item</a>
-                        </div>
-                    </div>
+        <section id="accordion">
+          <h1>Accordion</h1>
+          <hr />
 
-                    <div class="grid-item card">
-                        <div class="card__card-media">
-                            <a href=""><img src="https://via.placeholder.com/400x300" alt="" class="card-media__image"></a>
-                        </div>
+          <div class="accordion">
+            <button class="js-accordion-toggle accordion__trigger">
+              Accordion 1
+            </button>
 
-                        <div class="card__card-info">
-                            <a href="" class="card-info__title">Grid item</a>
-                        </div>
-                    </div>
+            <div class="accordion__content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                tincidunt nec mi vitae volutpat. Aliquam dolor purus, pulvinar
+                et facilisis sit amet, euismod facilisis nulla.
+              </p>
+            </div>
+          </div>
+        </section>
 
-                    <div class="grid-item card">
-                        <div class="card__card-media">
-                            <a href=""><img src="https://via.placeholder.com/400x300" alt="" class="card-media__image"></a>
-                        </div>
+        <section id="slider">
+          <h1>Slider</h1>
+          <hr />
 
-                        <div class="card__card-info">
-                            <a href="" class="card-info__title">Grid item</a>
-                        </div>
-                    </div>
-
-                    <div class="grid-item card">
-                        <div class="card__card-media">
-                            <a href=""><img src="https://via.placeholder.com/400x300" alt="" class="card-media__image"></a>
-                        </div>
-
-                        <div class="card__card-info">
-                            <a href="" class="card-info__title">Grid item</a>
-                        </div>
-                    </div>      
-
-                    <div class="grid-item card">
-                        <div class="card__card-media">
-                            <a href=""><img src="https://via.placeholder.com/400x300" alt="" class="card-media__image"></a>
-                        </div>
-
-                        <div class="card__card-info">
-                            <a href="" class="card-info__title">Grid item</a>
-                        </div>
-                    </div>                         
+          <div class="carousel-1">
+            <div data-glide-el="track">
+              <div class="glide__slides">
+                <div class="glide__slide">
+                  <img src="https://via.placeholder.com/450x300" alt="" />
                 </div>
 
-            </section>
-
-
-            <section id="table">
-                <h1>Table</h1> 
-                <hr>
-
-                <table>
-                    <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                    </tr>
-
-                    <tr>
-                        <td data-label="First Name">Joe</td>
-                        <td data-label="Last Name">Bloggs</td>
-                    </tr>             
-                </table>
-            </section>
-
-
-            <section id="form">
-                <h1>Form</h1> 
-                <hr>
-                
-                <form method="post">
-                    <label for="inputText">Text field</label>
-                    <input type="text" id="inputText" name="inputText">
-
-                    <label for="selectList">Make a selection</label>
-                    <select id="selectList" name="selectList">
-                        <option value="Option A">Option A</option>
-                        <option value="Option B">Option B</option>
-                        <option value="Option C">Option C</option>
-                    </select> 
-                    
-                    <ul class="checkbox-list">
-                        <h4>Make a selection</h4>
-
-                        <li>
-                            <div class="checkbox-container">
-                                <label for="checkboxList">
-                                    <input type="checkbox" checked="checked" name="checkboxList" value="Option A">
-                                    <span class="custom-checkbox"></span>
-                                    Option A
-                                </label>
-                            </div>
-                            <div class="checkbox-container">
-                                <label for="checkboxList">
-                                    <input type="checkbox" name="checkboxList" value="Option B">
-                                    <span class="custom-checkbox"></span>
-                                    Option B
-                                </label>
-                            </div>
-                            <div class="checkbox-container">
-                                <label for="checkboxList">
-                                    <input type="checkbox" name="checkboxList" value="Option C">
-                                    <span class="custom-checkbox"></span>
-                                    Option C
-                                </label>
-                            </div>
-                        </li>
-                    </ul> 
-
-                    
-                    <ul class="radio-list">   
-                        <h4>Make a selection</h4> 
-
-                        <li>
-                            <div class="radio-container">
-                                <label for="radioList">
-                                    <input type="radio" checked="checked" id="radioList" name="radioList" value="Option A">
-                                    <span class="custom-radio"></span>
-                                    Option A
-                                </label>
-                            </div>
-                            <div class="radio-container">
-                                <label for="radioList">
-                                    <input type="radio" id="radioList" name="radioList" value="Option B">
-                                    <span class="custom-radio"></span>
-                                    Option B
-                                </label>
-                            </div>
-                            <div class="radio-container">
-                                <label for="radioList">
-                                    <input type="radio" id="radioList" name="radioList" value="Option C">
-                                    <span class="custom-radio"></span>
-                                    Option C
-                                </label>
-                            </div>
-                        </li>    
-                    </ul>
-    
-                    <div class="button-centered">
-                        <input type="submit" value="Submit" class="button primary">
-                    </div>    
-                </form>
-            </section>
-
-
-            <section id="accordion">
-                <h1>Accordion</h1> 
-                <hr>
-
-                <div class="accordion">
-                    <button class="js-accordion-toggle accordion__trigger">Accordion 1</button>
-            
-                    <div class="accordion__content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt nec mi vitae volutpat. Aliquam dolor purus, pulvinar et facilisis sit amet, euismod facilisis nulla.</p>
-                    </div>
+                <div class="glide__slide">
+                  <img src="https://via.placeholder.com/700x700" alt="" />
                 </div>
-            </section>
+              </div>
+            </div>
 
+            <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow" data-glide-dir="<">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon"
+                >
+                  <path d="m11 5-7 7 7 7M4 12h16" />
+                </svg>
+              </button>
+              <button class="glide__arrow" data-glide-dir=">">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon"
+                >
+                  <path d="M4 12h16M13 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
 
-            <section id="slider">
-                <h1>Slider</h1> 
-                <hr>
-                
-                <div class="slider-container">
-                    <div class="slider">
-                        <div class="slider__slide">
-                            <a href=""><img src="https://via.placeholder.com/900x300" alt=""></a>
-                        </div>
+        <section id="modal">
+          <h1>Modal</h1>
+          <hr />
 
-                        <div class="slider__slide">
-                            <a href=""><img src="https://via.placeholder.com/900x300" alt=""></a>
-                        </div>
+          <a href="#" id="js-open-modal" class="button primary">Open Modal</a>
 
-                        <div class="slider__slide">
-                            <a href=""><img src="https://via.placeholder.com/900x300" alt=""></a>
-                        </div>
-                    </div>
-
-                    <div class="vertically-center slider-arrows">
-                        <span class="slider-arrows__prev"></span>
-                        <span class="slider-arrows__next"></span>
-                    </div>
-
-                    <div class="slider-dots"></div>
+          <div class="modal">
+            <div class="container container--modal">
+              <div class="modal-content">
+                <div class="close-modal">
+                  <a href="#" id="js-close-modal" class="button">
+                    <img
+                      src="images/icons/icon-close.svg"
+                      alt=""
+                      class="icon"
+                    />
+                  </a>
                 </div>
-            </section>
 
+                <h1>Modal Content</h1>
 
-            <section id="modal">
-                <h1>Modal</h1> 
-                <hr>
+                <p>
+                  Nunc viverra non augue et ullamcorper. Nulla quis est eu lorem
+                  commodo efficitur. Mauris vitae erat ac tellus gravida
+                  vestibulum nec fringilla justo. Integer dignissim condimentum
+                  vulputate. Curabitur consequat nulla elit, vel feugiat massa
+                  porttitor et.
+                </p>
 
-                <a href="#" id="js-open-modal" class="button primary">Open Modal</a>
-
-                <div class="modal">
-                    <div class="container container--modal">
-                        <div class="modal-content">
-                            <div class="close-modal">
-                                <a href="#" id="js-close-modal" class="button">
-                                    <img src="images/icons/icon-close.svg" alt="" class="icon">
-                                </a>
-                            </div>
-
-                            <h1>Modal Content</h1>
-
-                            <p>Nunc viverra non augue et ullamcorper. Nulla quis est eu lorem commodo efficitur. Mauris vitae erat ac tellus gravida vestibulum nec fringilla justo. Integer dignissim condimentum vulputate. Curabitur consequat nulla elit, vel feugiat massa porttitor et.</p>
-
-                            <p>Sed interdum odio erat, sed sagittis ipsum egestas vel. In id tristique elit. Fusce lorem orci, tristique non pretium id, suscipit sit amet nibh. Vestibulum malesuada metus vitae quam accumsan fermentum. Etiam ultrices aliquam convallis.</p>
-        
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </div>
+                <p>
+                  Sed interdum odio erat, sed sagittis ipsum egestas vel. In id
+                  tristique elit. Fusce lorem orci, tristique non pretium id,
+                  suscipit sit amet nibh. Vestibulum malesuada metus vitae quam
+                  accumsan fermentum. Etiam ultrices aliquam convallis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
-
     <footer>
-        <div class="container">
-            <hr>
-            <p style="text-align: center;">&copy; <a href="https://www.linkedin.com/in/deepeedev/" target="_blank" rel="noopener">deepeedev</a> 2020</p>
-        </div>        
+      <div class="container">
+        <hr />
+        <p style="text-align: center">
+          &copy;
+          <a
+            href="https://www.linkedin.com/in/deepeedev/"
+            target="_blank"
+            rel="noopener"
+            >deecasadev</a
+          >
+          2022
+        </p>
+      </div>
     </footer>
 
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-    <script src="js/slick.min.js"></script>
+    <script src="js/glide.min.js"></script>
     <script src="js/scripts.js"></script>
-
-</body>
+  </body>
 </html>
