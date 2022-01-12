@@ -90,9 +90,11 @@ div[data-glide-el="track"] {
   user-select: none;
 }
 .glide__arrow {
+  align-items: center;
   background: #fff;
   border-radius: 50%;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
 
@@ -109,18 +111,8 @@ div[data-glide-el="track"] {
   width: 30px;
 
   .icon {
-    height: 17px;
-    width: 17px;
-  }
-
-  @include breakpoint-l {
     height: 22px;
     width: 22px;
-
-    .icon {
-      height: 15px;
-      width: 15px;
-    }
   }
 }
 

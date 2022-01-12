@@ -5,14 +5,8 @@
   margin: 0 auto;
 }
 
-.close-nav {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
 .main-nav {
-  background: rgba(95, 95, 95, 0.9);
+  background: rgba(38, 153, 251, 0.9);
   height: 100vh;
   padding: $medium;
   position: fixed;
@@ -21,7 +15,7 @@
   right: 0;
   transition: all 0.5s ease;
   width: 100%;
-  z-index: 9999;
+  z-index: 9998;
 
   &.open {
     top: 0;
@@ -31,10 +25,18 @@
     font-size: 2.4rem;
   }
 }
+
+.main-nav__close {
+  position: absolute;
+  top: $medium;
+  right: $medium;
+}
+
 .main-nav__list {
   margin: 0 auto;
   padding: 0;
 }
+
 .main-nav-list__item {
   list-style: none;
 
@@ -44,6 +46,6 @@
   }
   a:hover,
   a:active {
-    color: #f2f2f2;
+    color: $grey--med;
   }
 }

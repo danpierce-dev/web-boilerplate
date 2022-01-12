@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
 
-    <title>Boilerplate</title>
+    <title>Web Boilerplate</title>
 
     <link rel="stylesheet" href="css/styles.css" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <!-- 32×32 -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- 180×180 -->
+    <link rel="manifest" href="/site.webmanifest" />
 
     <meta name="description" content="" />
     <meta property="og:title" content="" />
@@ -19,13 +26,6 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:url" content="" />
     <meta name="twitter:dnt" content="on" />
-
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <!-- 32×32 -->
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <!-- 180×180 -->
-    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Google Analytics: change UA-XXXXX-X to site's ID. -->
     <script>
@@ -48,73 +48,82 @@
 
   <body>
     <header class="header">
-      <div class="container container--header flex-container">
-        <a href="index.html" class="header__logo">Boilerplate</a>
+      <div class="wrapper">
+        <div class="container container--header flex-container">
+          <a href="index.html" class="header__logo">Web Boilerplate</a>
 
-        <div class="flex-container header__header-links">
-          <a
-            href="index.html"
-            class="js-open-main-nav header-links__link open-nav"
+          <button
+            type="button"
+            class="js-open-main-nav header-links__link open-nav icon-button"
+            aria-label="Open Navigation"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
               class="icon"
             >
-              <path
-                d="M492 236H20c-11 0-20 9-20 20 0 11 9 20 20 20h472c11 0 20-9 20-20S503 236 492 236z"
-              />
-              <path
-                d="M492 76H20C9 76 0 85 0 96s9 20 20 20h472c11 0 20-9 20-20S503 76 492 76z"
-              />
-              <path
-                d="M492 396H20c-11 0-20 9-20 20s9 20 20 20h472c11 0 20-9 20-20S503 396 492 396z"
-              />
+              <path d="M5 6h14M5 12h14M5 18h14" />
             </svg>
-          </a>
+          </button>
         </div>
+
+        <nav class="main-nav">
+          <button
+            type="button"
+            class="js-close-main-nav icon-button main-nav__close"
+            aria-label="Close Navigation"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon"
+            >
+              <path d="M20 20 4 4m16 0L4 20" />
+            </svg>
+          </button>
+
+          <div class="container container--nav flex-container">
+            <ul class="main-nav__list">
+              <li class="js-nav-item main-nav-list__item">
+                <a href="#typography">Typography</a>
+              </li>
+              <li class="js-nav-item main-nav-list__item">
+                <a href="#grid">Grid</a>
+              </li>
+              <li class="js-nav-item main-nav-list__item">
+                <a href="#table">Table</a>
+              </li>
+              <li class="js-nav-item main-nav-list__item">
+                <a href="#form">Form </a>
+              </li>
+              <li class="js-nav-item main-nav-list__item">
+                <a href="#accordion">Accordion</a>
+              </li>
+              <li class="js-nav-item main-nav-list__item">
+                <a href="#slider">Slider</a>
+              </li>
+              <li class="js-nav-item main-nav-list__item">
+                <a href="#modal">Modal</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-
-      <nav class="main-nav">
-        <div class="container container--nav flex-container">
-          <a href="#" class="js-close-main-nav header-links__link close-nav">
-            <img src="images/icons/icon-close.svg" alt="" class="icon" />
-          </a>
-
-          <ul class="main-nav__list">
-            <li class="main-nav-list__item">
-              <a href="#typography">Typography</a>
-            </li>
-            <li class="main-nav-list__item">
-              <a href="#grid">Grid</a>
-            </li>
-            <li class="main-nav-list__item">
-              <a href="#table">Table</a>
-            </li>
-            <li class="main-nav-list__item">
-              <a href="#form">Form </a>
-            </li>
-            <li class="main-nav-list__item">
-              <a href="#accordion">Accordion</a>
-            </li>
-            <li class="main-nav-list__item">
-              <a href="#slider">Slider</a>
-            </li>
-            <li class="main-nav-list__item">
-              <a href="#modal">Modal</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
     </header>
 
     <main>
-      <div class="container">
-        <section id="typography">
+      <section id="typography">
+        <div class="wrapper">
           <h1>Typography</h1>
           <hr />
 
-          <div class="container--narrow">
+          <div class="container">
             <h2>Header 2</h2>
             <h3>Header 3</h3>
             <h4>Header 4</h4>
@@ -145,24 +154,29 @@
               <li>List item</li>
             </ul>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="grid">
+      <section id="grid">
+        <div class="wrapper">
           <h1>Grid</h1>
+          <hr />
 
           <div class="grid col-4">
             <div class="grid-item card">
               <div class="card__card-media">
                 <a href=""
                   ><img
-                    src="https://via.placeholder.com/400x300"
+                    src="https://via.placeholder.com/450x300"
                     alt=""
                     class="card-media__image"
                 /></a>
               </div>
 
               <div class="card__card-info">
-                <a href="" class="card-info__title">Grid item</a>
+                <h4>
+                  <a href="" class="card-info__title">Grid item</a>
+                </h4>
               </div>
             </div>
 
@@ -170,14 +184,16 @@
               <div class="card__card-media">
                 <a href=""
                   ><img
-                    src="https://via.placeholder.com/400x300"
+                    src="https://via.placeholder.com/450x300"
                     alt=""
                     class="card-media__image"
                 /></a>
               </div>
 
               <div class="card__card-info">
-                <a href="" class="card-info__title">Grid item</a>
+                <h4>
+                  <a href="" class="card-info__title">Grid item</a>
+                </h4>
               </div>
             </div>
 
@@ -185,14 +201,16 @@
               <div class="card__card-media">
                 <a href=""
                   ><img
-                    src="https://via.placeholder.com/400x300"
+                    src="https://via.placeholder.com/450x300"
                     alt=""
                     class="card-media__image"
                 /></a>
               </div>
 
               <div class="card__card-info">
-                <a href="" class="card-info__title">Grid item</a>
+                <h4>
+                  <a href="" class="card-info__title">Grid item</a>
+                </h4>
               </div>
             </div>
 
@@ -200,14 +218,16 @@
               <div class="card__card-media">
                 <a href=""
                   ><img
-                    src="https://via.placeholder.com/400x300"
+                    src="https://via.placeholder.com/450x300"
                     alt=""
                     class="card-media__image"
                 /></a>
               </div>
 
               <div class="card__card-info">
-                <a href="" class="card-info__title">Grid item</a>
+                <h4>
+                  <a href="" class="card-info__title">Grid item</a>
+                </h4>
               </div>
             </div>
 
@@ -215,57 +235,76 @@
               <div class="card__card-media">
                 <a href=""
                   ><img
-                    src="https://via.placeholder.com/400x300"
+                    src="https://via.placeholder.com/450x300"
                     alt=""
                     class="card-media__image"
                 /></a>
               </div>
 
               <div class="card__card-info">
-                <a href="" class="card-info__title">Grid item</a>
+                <h4>
+                  <a href="" class="card-info__title">Grid item</a>
+                </h4>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="table">
+      <section id="table">
+        <div class="wrapper">
           <h1>Table</h1>
           <hr />
 
           <table>
-            <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-            </tr>
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+              </tr>
+            </thead>
 
-            <tr>
-              <td data-label="First Name">Joe</td>
-              <td data-label="Last Name">Bloggs</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td data-label="First Name">Joe</td>
+                <td data-label="Last Name">Bloggs</td>
+              </tr>
+
+              <tr>
+                <td data-label="First Name">Joe</td>
+                <td data-label="Last Name">Bloggs</td>
+              </tr>
+            </tbody>
           </table>
-        </section>
+        </div>
+      </section>
 
-        <section id="form">
+      <section id="form">
+        <div class="wrapper">
           <h1>Form</h1>
           <hr />
 
           <form method="post">
-            <label for="inputText">Text field</label>
-            <input type="text" id="inputText" name="inputText" />
+            <div class="form__field">
+              <label for="inputText">Text field</label>
+              <input type="text" id="inputText" name="inputText" />
+            </div>
 
-            <label for="selectList">Make a selection</label>
-            <select id="selectList" name="selectList">
-              <option value="Option A">Option A</option>
-              <option value="Option B">Option B</option>
-              <option value="Option C">Option C</option>
-            </select>
+            <div class="form__field">
+              <label for="selectList">Make a selection</label>
+              <select id="selectList" name="selectList">
+                <option value="Option A">Option A</option>
+                <option value="Option B">Option B</option>
+                <option value="Option C">Option C</option>
+              </select>
+            </div>
 
-            <ul class="checkbox-list">
-              <h4>Make a selection</h4>
+            <div class="form__field">
+              <ul class="checkbox-list">
+                <h4>Make a selection</h4>
 
-              <li>
-                <div class="checkbox-container">
-                  <label for="checkboxList">
+                <li class="checkbox-list__item">
+                  <label for="checkboxList" class="checkbox-list-item__label">
                     <input
                       type="checkbox"
                       checked="checked"
@@ -273,40 +312,42 @@
                       value="Option A"
                     />
                     <span class="custom-checkbox"></span>
-                    Option A
+                    <span>Option A</span>
                   </label>
-                </div>
-                <div class="checkbox-container">
-                  <label for="checkboxList">
+                </li>
+
+                <li class="checkbox-list__item">
+                  <label for="checkboxList" class="checkbox-list-item__label">
                     <input
                       type="checkbox"
                       name="checkboxList"
                       value="Option B"
                     />
                     <span class="custom-checkbox"></span>
-                    Option B
+                    <span>Option B</span>
                   </label>
-                </div>
-                <div class="checkbox-container">
-                  <label for="checkboxList">
+                </li>
+
+                <li class="checkbox-list__item">
+                  <label for="checkboxList" class="checkbox-list-item__label">
                     <input
                       type="checkbox"
                       name="checkboxList"
                       value="Option C"
                     />
                     <span class="custom-checkbox"></span>
-                    Option C
+                    <span>Option C</span>
                   </label>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
 
-            <ul class="radio-list">
-              <h4>Make a selection</h4>
+            <div class="form__field">
+              <ul class="radio-list">
+                <h4>Make a selection</h4>
 
-              <li>
-                <div class="radio-container">
-                  <label for="radioList">
+                <li class="radio-list__item">
+                  <label for="radioList" class="radio-list-item__label">
                     <input
                       type="radio"
                       checked="checked"
@@ -315,124 +356,163 @@
                       value="Option A"
                     />
                     <span class="custom-radio"></span>
-                    Option A
+                    <span>Option A</span>
                   </label>
-                </div>
-                <div class="radio-container">
-                  <label for="radioList">
+                </li>
+
+                <li class="radio-list__item">
+                  <label for="radioList" class="radio-list-item__label">
                     <input
                       type="radio"
+                      checked="checked"
                       id="radioList"
                       name="radioList"
-                      value="Option B"
+                      value="Option A"
                     />
                     <span class="custom-radio"></span>
-                    Option B
+                    <span>Option A</span>
                   </label>
-                </div>
-                <div class="radio-container">
-                  <label for="radioList">
+                </li>
+
+                <li class="radio-list__item">
+                  <label for="radioList" class="radio-list-item__label">
                     <input
                       type="radio"
+                      checked="checked"
                       id="radioList"
                       name="radioList"
-                      value="Option C"
+                      value="Option A"
                     />
                     <span class="custom-radio"></span>
-                    Option C
+                    <span>Option A</span>
                   </label>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
 
             <div class="button-centered">
               <input type="submit" value="Submit" class="button primary" />
             </div>
           </form>
-        </section>
+        </div>
+      </section>
 
-        <section id="accordion">
+      <section id="accordion">
+        <div class="wrapper">
           <h1>Accordion</h1>
           <hr />
 
-          <div class="accordion">
-            <button class="js-accordion-toggle accordion__trigger">
-              Accordion 1
-            </button>
+          <div class="container">
+            <div class="accordion open">
+              <button class="js-accordion-toggle accordion__trigger">
+                Accordion 1
+              </button>
 
-            <div class="accordion__content">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                tincidunt nec mi vitae volutpat. Aliquam dolor purus, pulvinar
-                et facilisis sit amet, euismod facilisis nulla.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="slider">
-          <h1>Slider</h1>
-          <hr />
-
-          <div class="carousel-1">
-            <div data-glide-el="track">
-              <div class="glide__slides">
-                <div class="glide__slide">
-                  <img src="https://via.placeholder.com/450x300" alt="" />
-                </div>
-
-                <div class="glide__slide">
-                  <img src="https://via.placeholder.com/700x700" alt="" />
-                </div>
+              <div class="accordion__content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam tincidunt nec mi vitae volutpat. Aliquam dolor purus,
+                  pulvinar et facilisis sit amet, euismod facilisis nulla.
+                </p>
               </div>
             </div>
 
-            <div class="glide__arrows" data-glide-el="controls">
-              <button class="glide__arrow" data-glide-dir="<">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 25 25"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon"
-                >
-                  <path d="m11 5-7 7 7 7M4 12h16" />
-                </svg>
+            <div class="accordion">
+              <button class="js-accordion-toggle accordion__trigger">
+                Accordion 2
               </button>
-              <button class="glide__arrow" data-glide-dir=">">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 25 25"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon"
-                >
-                  <path d="M4 12h16M13 5l7 7-7 7" />
-                </svg>
-              </button>
+
+              <div class="accordion__content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam tincidunt nec mi vitae volutpat. Aliquam dolor purus,
+                  pulvinar et facilisis sit amet, euismod facilisis nulla.
+                </p>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="modal">
+      <section id="slider">
+        <div class="wrapper">
+          <h1>Slider</h1>
+          <hr />
+
+          <div class="container">
+            <div class="carousel-1">
+              <div data-glide-el="track">
+                <div class="glide__slides">
+                  <div class="glide__slide">
+                    <img src="https://via.placeholder.com/1400x900" alt="" />
+                  </div>
+
+                  <div class="glide__slide">
+                    <img src="https://via.placeholder.com/1400x900" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow" data-glide-dir="<">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-3 0 25 25"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon"
+                  >
+                    <path d="m11 5-7 7 7 7M4 12h16" />
+                  </svg>
+                </button>
+                <button class="glide__arrow" data-glide-dir=">">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="3 0 25 25"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon"
+                  >
+                    <path d="M4 12h16M13 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="modal">
+        <div class="wrapper">
           <h1>Modal</h1>
           <hr />
 
-          <a href="#" id="js-open-modal" class="button primary">Open Modal</a>
+          <button type="button" class="js-open-modal button primary">
+            Open Modal
+          </button>
 
           <div class="modal">
             <div class="container container--modal">
-              <div class="modal-content">
+              <div class="modal__content">
                 <div class="close-modal">
-                  <a href="#" id="js-close-modal" class="button">
-                    <img
-                      src="images/icons/icon-close.svg"
-                      alt=""
+                  <button
+                    type="button"
+                    class="js-close-modal icon-button"
+                    aria-label="Close Modal"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
                       class="icon"
-                    />
-                  </a>
+                    >
+                      <path d="M20 20 4 4m16 0L4 20" />
+                    </svg>
+                  </button>
                 </div>
 
                 <h1>Modal Content</h1>
@@ -454,23 +534,24 @@
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-      <div class="container">
-        <hr />
-        <p style="text-align: center">
-          &copy;
-          <a
-            href="https://www.linkedin.com/in/deepeedev/"
-            target="_blank"
-            rel="noopener"
-            >deecasadev</a
-          >
-          2022
-        </p>
+      <div class="wrapper">
+        <div class="container">
+          <p style="text-align: center">
+            &copy;
+            <a
+              href="https://www.linkedin.com/in/danpierce-dev/"
+              target="_blank"
+              rel="noopener"
+              >danpierce.dev</a
+            >
+            2022
+          </p>
+        </div>
       </div>
     </footer>
 

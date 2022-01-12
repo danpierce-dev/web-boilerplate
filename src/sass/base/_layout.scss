@@ -1,12 +1,13 @@
-.container {
-  margin: $medium auto;
+.wrapper {
+  margin: 0 auto;
   position: relative;
   width: 90%;
 }
-.container--narrow {
-  margin: 0 auto;
+
+.container {
+  margin: $medium auto;
   max-width: 1200px;
-  width: 90%;
+  position: relative;
 }
 
 .flex-container {
