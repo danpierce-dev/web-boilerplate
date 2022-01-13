@@ -6,9 +6,9 @@
 }
 
 .main-nav {
-  background: rgba(38, 153, 251, 0.9);
+  background: rgba(35, 37, 81, 0.95);
   height: 100vh;
-  padding: $medium;
+  padding: var(--medium);
   position: fixed;
   text-align: center;
   top: -4000px;
@@ -28,8 +28,8 @@
 
 .main-nav__close {
   position: absolute;
-  top: $medium;
-  right: $medium;
+  top: var(--medium);
+  right: var(--medium);
 }
 
 .main-nav__list {
@@ -42,10 +42,10 @@
 
   a,
   a:visited {
-    color: #fff;
+    color: var(--beige);
   }
   a:hover,
   a:active {
-    color: $grey--med;
+    color: var(--beige);
   }
 }

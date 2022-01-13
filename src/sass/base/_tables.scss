@@ -1,19 +1,20 @@
 tr {
   background: #e2e2e2;
   border: solid 1px #fff;
+  font-size: var(--body-font-med);
   &:nth-of-type(odd) {
     background: #f2f2f2;
   }
 }
 
 th {
-  background: $primary;
+  background: var(--beige);
   color: #fff;
 }
 
 th,
 td {
-  padding: $small $medium;
+  padding: var(--small) var(--medium);
   text-align: center;
 }
 
@@ -58,7 +59,7 @@ td {
   // acts as <th> on mobile
   td:before {
     content: attr(data-label);
-    font-weight: $bold;
+    font-weight: var(--bold);
     left: 6px;
     position: absolute;
     top: 12px;

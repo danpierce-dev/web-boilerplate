@@ -5,17 +5,17 @@ main,
 }
 
 main {
-  margin: 66px 0 $large;
-  padding: $medium 0;
+  margin: 66px 0 var(--large);
+  padding: var(--medium) 0;
 }
 
 section {
-  margin: $medium auto;
+  margin: var(--medium) auto;
   @include breakpoint-m {
-    margin: $large auto;
+    margin: var(--large) auto;
   }
   @include breakpoint-xl {
-    margin: $xlarge auto;
+    margin: var(--xlarge) auto;
   }
 }
 

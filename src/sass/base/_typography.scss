@@ -3,10 +3,9 @@ h2,
 h3,
 h4 {
   clear: both;
-  color: $grey--dark;
-  font-family: $base-font-family;
-  font-weight: $base-font-weight;
-  margin: 0 0 $small;
+  color: var(--navy);
+  font-weight: normal;
+  margin: 0 0 var(--small);
 }
 h1 {
   font-size: 3rem;
@@ -57,19 +56,19 @@ h4 {
 }
 
 p {
-  margin: 0 0 $medium;
+  margin: 0 0 var(--medium);
 }
 
 blockquote {
   display: flex;
   font-size: 2rem;
   justify-content: center;
-  margin: $medium auto;
+  margin: var(--medium) auto;
   width: 90%;
 
   @include breakpoint-m {
     font-size: 2.4rem;
-    margin: $large auto;
+    margin: var(--large) auto;
   }
 }
 blockquote:before,
@@ -90,10 +89,10 @@ q {
 
 // Text selection
 ::selection {
-  background: $primary;
+  background: var(--beige);
   color: #fff;
 }
 ::-moz-selection {
-  background: $primary;
+  background: var(--beige);
   color: #fff;
 }

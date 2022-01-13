@@ -13,14 +13,14 @@ html {
 }
 
 body {
-  color: $grey--dark;
+  color: var(--navy);
   background: #fff;
   font: {
-    family: $base-font-family;
-    size: $base-font-size;
-    weight: $base-font-weight;
+    family: var(--body-font-family);
+    size: var(--body-font-large);
+    weight: var(--regular);
   }
-  line-height: $base-line-height;
+  line-height: var(--base-lh);
   min-height: 100vh;
   text-rendering: optimizeSpeed;
 
@@ -65,8 +65,8 @@ select {
 }
 
 hr {
-  color: #d2d2d2;
-  margin: $medium 0;
+  color: var(--grey);
+  margin: var(--medium) 0;
   width: 100%;
 }
 

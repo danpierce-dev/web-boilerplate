@@ -1,21 +1,21 @@
 // media queries
 @mixin breakpoint-s {
-  @media (min-width: #{$phone-width}) {
+  @media (min-width: #{$phone}) {
     @content;
   }
 }
 @mixin breakpoint-m {
-  @media (min-width: #{$tablet-width}) {
+  @media (min-width: #{$tablet}) {
     @content;
   }
 }
 @mixin breakpoint-l {
-  @media (min-width: #{$laptop-width}) {
+  @media (min-width: #{$laptop}) {
     @content;
   }
 }
 @mixin breakpoint-xl {
-  @media (min-width: #{$desktop-width}) {
+  @media (min-width: #{$desktop}) {
     @content;
   }
 }

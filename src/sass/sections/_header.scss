@@ -1,8 +1,8 @@
 .header {
   background: #fff;
-  border-bottom: solid 1px $grey--med;
+  border-bottom: solid 1px var(--navy);
   left: 0;
-  padding: $small 0;
+  padding: var(--small) 0;
   position: fixed;
   top: 0;
   width: 100%;

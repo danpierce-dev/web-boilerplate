@@ -1,39 +1,40 @@
-// font weights
-$light: 100;
-$regular: 400;
-$bold: 700;
+:root {
+  // colour
+  --beige: #b89d87;
+  --navy: #232551;
+  --grey: #f2f2f2;
 
-// font styling
-$base-font-family: "Open Sans", sans-serif;
-$base-font-size: 1.8rem;
-$base-font-weight: $regular;
-$base-line-height: 1.6;
+  // font
+  --light: 300;
+  --regular: 400;
+  --bold: 700;
 
-// global colours
-$primary: #2699fb;
-$primary--dark: #0e78d2;
-$secondary: #2699fb;
+  --body-font-family: "Open Sans", sans-serif;
 
-$grey: #efefef;
-$grey--med: #d2d2d2;
-$grey--dark: #5f5f5f;
-$link: #2699fb;
-$link--dark: #0e78d2;
+  --body-font-small: 1.4rem;
+  --body-font-med: 1.6rem;
+  --body-font-large: 1.8rem;
 
-// universal units
-$small: 10px;
-$medium: 20px;
-$large: 40px;
-$xlarge: 80px;
+  --base-lh: 1.6;
 
-// universal border-radius
-$rounded: 5px;
+  // units
+  --small: 10px;
+  --medium: 20px;
+  --large: 40px;
+  --xlarge: 80px;
 
-// universal transition speed
-$base-speed: 0.3s;
+  // border-radius
+  --radius-small: 5px;
+  --radius-med: 10px;
+  --radius-large: 15px;
+
+  // transitions
+  --slow: 0.4s;
+  --fast: 0.2s;
+}
 
 // media query breakpoints
-$phone-width: 550px;
-$tablet-width: 768px;
-$laptop-width: 1024px;
-$desktop-width: 1400px;
+$phone: 550px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1400px;

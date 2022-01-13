@@ -1,15 +1,16 @@
 .accordion {
-  margin: $medium auto;
+  margin: var(--medium) auto;
 }
 
 .accordion__trigger {
-  background: $primary;
-  border: solid 1px $primary;
-  border-radius: $rounded $rounded 0 0;
-  color: #fff;
+  background: var(--navy);
+  border: 0;
+  border-radius: var(--radius-small) var(--radius-small) 0 0;
+  color: var(--beige);
   cursor: pointer;
   display: block;
-  font-size: 1.6rem;
+  font-size: var(--body-font-med);
+  font-weight: bold;
   padding: 8px 16px;
   position: relative;
   text-align: left;
@@ -25,11 +26,11 @@
 }
 
 .accordion__content {
-  background: $grey;
-  border-radius: 0 0 $rounded $rounded;
+  background: var(--grey);
+  border-radius: 0 0 var(--radius-small) var(--radius-small);
   display: none;
-  font-size: 1.6rem;
-  padding: $medium;
+  font-size: var(--body-font-med);
+  padding: var(--medium);
 
   *:last-child {
     margin-bottom: 0;
@@ -38,7 +39,8 @@
 
 .open {
   .accordion__trigger {
-    background: $primary--dark;
+    background: var(--beige);
+    color: var(--navy);
     &:after {
       content: "-";
     }

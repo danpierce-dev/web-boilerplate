@@ -58,12 +58,12 @@ div[data-glide-el="track"] {
 .glide__bullets {
   display: flex;
   justify-content: center;
-  margin: $medium 0 !important;
+  margin: var(--medium) 0 !important;
   -webkit-touch-callout: none;
   user-select: none;
 }
 .glide__bullet {
-  background: $grey;
+  background: var(--navy);
   border-radius: 50%;
   display: inline-block;
   margin: 0 5px;
@@ -72,7 +72,7 @@ div[data-glide-el="track"] {
   &:hover,
   &:focus,
   &:active {
-    background: $primary;
+    background: var(--beige);
   }
 }
 
@@ -91,17 +91,29 @@ div[data-glide-el="track"] {
 }
 .glide__arrow {
   align-items: center;
-  background: #fff;
+  background: var(--navy);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   margin: 0;
   padding: 0;
 
+  .icon {
+    fill: var(--beige);
+    stroke: none;
+    height: 22px;
+    width: 22px;
+  }
+
+  &:hover,
   &:focus,
   &:active,
   &--active {
-    background: $primary;
+    background: var(--beige);
+
+    .icon {
+      fill: var(--navy);
+    }
   }
 }
 
@@ -109,11 +121,6 @@ div[data-glide-el="track"] {
 .glide__arrow {
   height: 30px;
   width: 30px;
-
-  .icon {
-    height: 22px;
-    width: 22px;
-  }
 }
 
 .glide--rtl {

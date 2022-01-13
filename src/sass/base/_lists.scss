@@ -1,13 +1,13 @@
 ol,
 ul {
   padding-left: 20px;
-  margin: $medium 0 $medium $medium;
+  margin: var(--medium) 0 var(--medium) var(--medium);
 }
 ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: $medium 0 $medium $large;
+  margin: var(--medium) 0 var(--medium) var(--large);
 }
 
 li {

@@ -1,16 +1,30 @@
 a {
-  border-color: $primary !important;
-  color: $primary;
+  border-color: var(--beige);
+  color: var(--beige);
   cursor: pointer;
   text-decoration: none;
-  transition: all ease-in-out $base-speed;
+  transition: all ease-in-out var(--slow);
 }
 a:active,
 a:hover {
-  border-color: $link--dark;
-  color: $link--dark;
+  border-color: var(--beige);
+  color: var(--beige);
+  filter: brightness(1.2);
   outline: 0;
+  text-decoration: underline;
 }
 a:focus {
-  outline: 1px dotted $link--dark;
+  outline: 2px solid var(--navy);
+}
+
+.skip-to-content:focus {
+  background: #fff;
+  clip: initial;
+  height: auto;
+  padding: var(--small);
+  text-decoration: underline;
+  top: 0;
+  left: 0;
+  width: auto;
+  z-index: 9999;
 }

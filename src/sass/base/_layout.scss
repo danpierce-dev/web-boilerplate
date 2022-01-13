@@ -5,7 +5,7 @@
 }
 
 .container {
-  margin: $medium auto;
+  margin: var(--medium) auto;
   max-width: 1200px;
   position: relative;
 }

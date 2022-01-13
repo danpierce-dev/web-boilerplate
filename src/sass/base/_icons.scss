@@ -4,8 +4,8 @@
   justify-content: center;
   height: 20px;
   padding: 0;
-  stroke: $primary;
-  transition: all $base-speed;
+  stroke: var(--beige);
+  transition: all var(--slow);
   vertical-align: middle;
   width: 20px;
 

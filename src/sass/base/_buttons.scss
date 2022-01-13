@@ -1,59 +1,55 @@
 .button,
 button {
-  background: $primary;
+  background: var(--navy);
   border: 0;
-  border-radius: $rounded;
+  border-radius: var(--radius-small);
   box-sizing: border-box;
-  color: #fff;
+  color: var(--beige);
   cursor: pointer;
   display: inline-block;
   font: {
-    family: $base-font-family;
-    size: 1.4rem;
-    weight: $base-font-weight;
+    size: var(--body-font-small);
+    weight: var(--regular);
   }
   letter-spacing: 0.2px;
-  padding: $small $medium;
+  padding: var(--small) var(--medium);
   text-align: center;
-  text-decoration: none;
-  transition: all ease-in-out $base-speed;
+  transition: all ease-in-out var(--slow);
 
   &:visited {
-    color: #fff;
+    background: var(--navy);
+    color: var(--beige);
   }
   &:active,
   &:hover {
-    background: $link--dark;
-    color: #fff;
+    background: var(--navy);
+    color: var(--beige);
+    filter: brightness(1.2);
     outline: 0;
-  }
-  &:focus {
-    outline: 1px dotted $link--dark;
+    text-decoration: none;
   }
   &:active {
     transform: translateY(1px);
   }
-
-  .icon {
-    margin-bottom: 0;
+  &:focus {
+    background: var(--beige);
+    color: var(--navy);
+    outline: 0;
   }
 }
 
 @include breakpoint-s {
   .button.primary {
-    font-size: 1.8rem;
+    font-size: var(--body-font-med);
+    font-weight: var(--bold);
   }
 }
 
-.button.secondary {
-  background: $grey--med;
-  color: $grey--dark;
-
-  &:active,
-  &:hover {
-    background: $grey--dark;
-    color: #fff;
-  }
+.button--reversed,
+.button--reversed:hover,
+.button--reversed:active {
+  background: var(--beige);
+  color: var(--navy);
 }
 
 .button-centered {
@@ -63,10 +59,16 @@ button {
 
 .icon-button {
   height: 40px;
-  padding: $small;
+  padding: var(--small);
   width: 40px;
 
   .icon {
-    stroke: #fff;
+    stroke: var(--beige);
+  }
+
+  &:focus {
+    .icon {
+      stroke: var(--navy);
+    }
   }
 }
